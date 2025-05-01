@@ -38,11 +38,21 @@
           animation: fadeInSlide 1.5s ease forwards;
         }
 
+        .start-button {
+          position: absolute;
+          bottom: 1%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 6%;
+          opacity: 0;
+          animation: fadeInSlide 2.0s ease forwards;
+        }
+
         .layered-image:nth-child(1) { animation-delay: 0.15s; }
         .layered-image:nth-child(2) { animation-delay: 0.10s; }
         .layered-image:nth-child(3) { animation-delay: 0.25s; }
-        .layered-image:nth-child(4) { animation-delay: 0.30s; }
-        .layered-image:nth-child(5) { animation-delay: 0.35s; }
+        .layered-image:nth-child(4) { animation-delay: 0.35s; }
+        .start-button { animation-delay: 0.35s; }
 
         @keyframes fadeInSlide {
           0% {
@@ -53,6 +63,13 @@
             opacity: 1;
             transform: translate(-50%, -50%);
           }
+        }
+
+        /* Hover effect for StartButton */
+        .start-button:hover {
+            transform: translate(-50%, -50%) scale(1.1) !important;
+            opacity: 1 !important;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -67,7 +84,7 @@
     <img src="./assets/CompSci.png" alt="Layer 2" class="layered-image" style="z-index: 2;">
     <img src="./assets/Welcome.png" alt="Layer 3" class="layered-image" style="z-index: 3;">
     <img src="./assets/Border.png" alt="Layer 4" class="layered-image" style="z-index: 4;">
-    <img src="./assets/StartButton.png" alt="Layer 5" class="layered-image" style="z-index: 5;">
+    <a href="PlayerSelect.html"><img src="./assets/StartButton.png" alt="Layer 5" class="start-button" style="z-index: 5;"></a>
 </div>
 
 </body>
