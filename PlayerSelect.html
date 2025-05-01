@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jake Yatco</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+
+    .foreground {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .layered-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      transition: all 0.3s ease; /* Add transition for smooth effect */
+    }
+
+    .CivilEng {
+      position: relative;
+      height: 52%;
+      top: 55%;
+      left: 64%;
+    }
+
+    .CompSci {
+      height: 52%;
+      top: 31%;
+      left: 36%;
+    }
+
+    /* Hover effect for CivilEng and CompSci */
+    .CivilEng:hover, .CompSci:hover {
+      transform: translate(-50%, -50%) scale(1.1); /* Slightly scale the image */
+      filter: brightness(1.2); /* Increase brightness on hover */
+    }
+
+    /* Hide Layer 6 and 7 by default */
+    .CE , .CIS{
+      visibility: hidden; /* Hide by default */
+      opacity: 0; /* Ensure it is fully transparent */
+      transition: opacity 0.3s ease, visibility 0s 0.1s; /* Smooth transition */
+    }
+
+    .CivilEng:hover ~ .CE {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .CompSci:hover ~ .CIS {
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+<!-- Background Image -->
+<img src="./assets/playerSelect/BG.jpg" alt="Background" class="background">
+
+<!-- Foreground Container for Layering -->
+<div class="foreground">
+  <img src="./assets/playerSelect/AboutMe.png" alt="Layer 1" class="layered-image" style="z-index: 1;">
+  <img src="./assets/playerSelect/Frame.png" alt="Layer 2" class="layered-image" style="z-index: 2;">
+  <img src="./assets/playerSelect/PlayerSelect.png" alt="Layer 3" class="layered-image" style="z-index: 3;">
+  <img src="./assets/playerSelect/CivilEng.png" alt="Layer 4" class="layered-image CivilEng" style="z-index: 6;">
+  <img src="./assets/playerSelect/CompSci.png" alt="Layer 5" class="layered-image CompSci" style="z-index: 7;">
+  <img src="./assets/playerSelect/CE.png" alt="Layer 6" class="layered-image CE" style="z-index: 4;">
+  <img src="./assets/playerSelect/CIS.png" alt="Layer 7" class="layered-image CIS" style="z-index: 5;">
+
+</div>
+
+</body>
+</html>
