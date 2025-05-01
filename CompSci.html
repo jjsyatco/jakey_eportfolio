@@ -104,11 +104,12 @@
         border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         opacity: 0.9;
+        align-items: center;
     }
 
     .achievement img {
         width: 200px;
-        height: auto;
+        height: 200px;
         margin-right: 20px;
         border-radius: 8px;
     }
@@ -120,7 +121,7 @@
     .achievement h3 {
         font-size: 2rem;
         margin-bottom: 10px;
-        color: #00629b;
+        color: #198ccf;
     }
 
     .achievement p {
@@ -169,6 +170,72 @@
         max-height: 500px;
         padding-right: 10px;
     }
+
+    /* Responsive adjustments */
+@media (max-width: 768px) {
+  .achievement-container {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .achievement {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .achievement img {
+    margin: 0 0 15px 0;
+    width: 80%;
+    height: auto;
+  }
+
+  .achievement div {
+    max-width: 100%;
+  }
+
+  .achievement h3 {
+    font-size: 1.5rem;
+  }
+
+  .achievement p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .achievement h3 {
+    font-size: 1.3rem;
+  }
+
+  .achievement p {
+    font-size: 0.95rem;
+  }
+
+  .technical-stack-grid h4 {
+    font-size: 1rem;
+  }
+
+  .technical-stack-grid p {
+    font-size: 0.9rem;
+  }
+}
+
   </style>
 
   <!-- External FontAwesome for icons -->
@@ -200,42 +267,159 @@
   <div class="achievement-container">
     <!-- Achievement 1 -->
     <div class="achievement">
-      <img src="achievement1.jpg" alt="Achievement 1">
+      <img src="./assets/CompSci/OC.jpg" alt="Achievement 1">
       <div>
-        <h3>Achievement Title 1</h3>
-        <p>This is a brief description of your first achievement. You can add any relevant information about the achievement, skills gained, and how it connects to your career goals.</p>
+        <h3>Dean’s List Graduate – CIS Diploma</h3>
+        <p>A dedicated and high-achieving graduate of the Computer Information Systems (CIS) Diploma program, consistently earning a place on the Dean's List throughout my studies. This recognition reflects my commitment to academic excellence, strong problem-solving abilities, and passion for the tech field. My journey through the program not only sharpened my technical skills but also reinforced the importance of perseverance, focus, and continuous learning.</p>
       </div>
     </div>
 
     <!-- Achievement 2 -->
     <div class="achievement">
-      <img src="achievement2.jpg" alt="Achievement 2">
+      <img src="./assets/CompSci/IEEE.jpg" alt="Achievement 2">
       <div>
-        <h3>Achievement Title 2</h3>
-        <p>Provide some details about your second achievement. Maybe it was a project, recognition, or another milestone you hit in your career or education.</p>
+        <h3>Capstone Project – IEEE OC Student Branch Website</h3>
+        <p>As part of my capstone project, our group developed and launched a dynamic website for the IEEE Okanagan College Student Branch. This project allowed me to apply my skills in web development, project management, and team collaboration while delivering a modern, user-friendly platform for student members to connect, access resources, and stay updated on events. The website not only showcased my technical expertise but also demonstrated my ability to address the unique needs of a student organization in a real-world setting.</p>
+        <a href="https://studentbranches.ieee.org/ca-oc/" style="color: #f4f4f4f4;" target="_blank">https://studentbranches.ieee.org/ca-oc/</a>
       </div>
     </div>
 
     <!-- Achievement 3 -->
     <div class="achievement">
-      <img src="achievement3.jpg" alt="Achievement 3">
+      <a href="./assets/iOSGame.pdf" target="_blank"><img src="./assets/CompSci/iOS.png" alt="Achievement 3"></a>
       <div>
-        <h3>Achievement Title 3</h3>
-        <p>Here’s where you would describe your third achievement, whether it was a certification, project, or another important career moment.</p>
+        <h3>Final Project – iOS App Development</h3>
+        <p>For my final project in iOS App Development, I designed and developed a fully functional iOS app using Xcode. This project provided an opportunity to apply my knowledge of Swift programming, UI/UX design, and app architecture to create a seamless, intuitive, and engaging user experience. The app features several key functionalities taught in class, such as data persistence (for saving and retrieving user data) and network connectivity (for syncing data with remote servers), showcasing my ability to take an app from concept to deployment. This experience not only sharpened my technical skills but also deepened my understanding of mobile development within Apple's ecosystem.</p>
+        <a href="./assets/iOSGame.pdf" style="color: #f4f4f4f4;" target="_blank">FlyingMeowMeow.pdf</a>
       </div>
     </div>
 
     <!-- Achievement 4 -->
     <div class="achievement">
-      <img src="achievement4.jpg" alt="Achievement 4">
+      <a href="./219_final_project/e-Portfolio/Course%20Project/homepage.html" target="_blank"><img src="./assets/CompSci/ePortfolio.jpg" alt="Achievement 4"></a>
       <div>
-        <h3>Achievement Title 4</h3>
-        <p>Here’s where you would describe your fourth achievement, whether it was a certification, project, or another important career moment.</p>
+        <h3>Final Project – Client-Side Web System (ePortfolio)</h3>
+        <p>For my final project in Client-Side Web System, I designed and developed a fully responsive Cyberpunk Themed ePortfolio to showcase my academic achievements, technical skills, and projects. Using HTML, CSS, and JavaScript, I created an interactive and visually appealing platform where I highlight key milestones in my education and career. The ePortfolio also features a clean, user-friendly design that adapts to various screen sizes, ensuring an optimal viewing experience across devices. This project allowed me to apply principles of web design, usability, and responsive development, demonstrating my ability to create a polished web application from start to finish.</p>
+        <a href="./219_final_project/e-Portfolio/Course%20Project/homepage.html" style="color: #f4f4f4f4;" target="_blank">Cyberpunk Themed ePortfolio</a>
+      </div>
+    </div>
+
+    <!-- Achievement 5 -->
+    <div class="achievement">
+      <a href="./assets/budgetTracker.mp4" target="_blank"><img src="./assets/CompSci/BudgetTracker.jpg" alt="Achievement 5"></a>
+      <div>
+        <h3>Final Project – Web Development with LAMP (Budget Tracker)</h3>
+        <p>For my final project in Web Development with LAMP (Linux, Apache, MySQL, PHP), I developed a fully functional Budget Tracker application. The app allows users to track their income, expenses, and set budget goals in an intuitive and secure platform. Using PHP for the server-side logic, MySQL for database management, and HTML/CSS for front-end design, I created a user-friendly interface that allows for easy navigation and real-time updates. This project helped me refine my skills in full-stack development and database management, while also enhancing my understanding of the LAMP stack in building dynamic web applications.</p>
+        <a href="./assets/budgetTracker.mp4" style="color: #f4f4f4f4;" target="_blank">BudgetTracker.mp4</a>
+      </div>
+    </div>
+
+    <!-- Achievement 6 -->
+    <div class="achievement">
+      <a href="./assets/PopPiGame.mp4" target="_blank"><img src="./assets/CompSci/PopPiGame.jpg" alt="Achievement 6"></a>
+      <div>
+        <h3>Java Mini Game – Pop-PI Game</h3>
+        <p>As part of my programming practice in Java, I developed a mini game called Pop-PI Game. This interactive game challenges players to test their memory of the digits of Pi by collecting them in the correct sequence during gameplay. Designed with basic game mechanics and a focus on user interaction, Pop-PI combines education with entertainment, reinforcing numerical recall in a fun way. The project helped me strengthen my Java programming skills, particularly in areas like event handling, GUI development, and game logic.</p>
+        <a href="./assets/PopPiGame.mp4" style="color: #f4f4f4f4;" target="_blank">PopPiGame.mp4</a>
+      </div>
+    </div>
+
+    <!-- Technical Stack Section -->
+    <div style="margin-top: 50px;">
+      <h3 style="font-size: 2.5rem; color: #198ccf; text-align: center; margin-bottom: 0px; padding: 20px; background-color: #334155; opacity: 0.9; border-radius: 10px;">Technical Stack</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 20px; background-color: #334155; opacity: 0.9;  border-radius: 10px;">
+
+        <!-- Java -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/java.png" alt="Java" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>Java</h4>
+          <p>Strong OOP foundation; used in building desktop applications and games.</p>
+        </div>
+
+        <!-- C -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/c.png" alt="C" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>C</h4>
+          <p>Learned low-level memory management and procedural programming techniques.</p>
+        </div>
+
+        <!-- JavaScript -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/javascript.png" alt="JavaScript" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>JavaScript</h4>
+          <p>Used for client-side interactivity and DOM manipulation in web apps.</p>
+        </div>
+
+        <!-- HTML -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/html.png" alt="HTML" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>HTML</h4>
+          <p>Foundation of web structure; used extensively across projects and ePortfolio.</p>
+        </div>
+
+        <!-- CSS -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/css.png" alt="CSS" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>CSS</h4>
+          <p>Created responsive and visually engaging layouts with Flexbox and Grid.</p>
+        </div>
+
+        <!-- Swift -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/swift.svg" alt="Swift" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>Swift</h4>
+          <p>Used in iOS development to build interactive mobile applications in Xcode.</p>
+        </div>
+
+        <!-- Visual Programming -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/visual.png" alt="Visual Programming" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>Visual Programming</h4>
+          <p>Learned flow-based programming with tools like Scratch and LabVIEW.</p>
+        </div>
+
+        <!-- SQL -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/sql.png" alt="SQL" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>SQL</h4>
+          <p>Utilized for database creation, queries, and data manipulation in web projects.</p>
+        </div>
+
+        <!-- JUnit -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/junit.png" alt="JUnit" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>JUnit</h4>
+          <p>Used for writing and automating unit tests in Java-based applications.</p>
+        </div>
+
+        <!-- WordPress -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/wordpress.png" alt="WordPress" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>WordPress</h4>
+          <p>Built and customized websites using themes, plugins, and basic PHP.</p>
+        </div>
+
+        <!-- Scheme -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/scheme.png" alt="Scheme" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>Scheme</h4>
+          <p>Explored functional programming concepts through recursion and lists.</p>
+        </div>
+
+        <!-- Jira -->
+        <div style="text-align: center;">
+          <img src="./assets/TechStack/jira.png" alt="Jira" style="width: 100px; height: auto; margin-bottom: 10px;">
+          <h4>Jira</h4>
+          <p>Used for agile project management, sprint planning, and team collaboration.</p>
+        </div>
+
       </div>
     </div>
 
     <!-- Add more achievements as needed -->
   </div>
+
+
 </div>
 
 
