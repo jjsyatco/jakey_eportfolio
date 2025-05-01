@@ -71,9 +71,73 @@
             opacity: 1 !important;
             cursor: pointer;
         }
+
+        /* Music Button and Volume */
+        .music-toggle-btn {
+          position: absolute;
+          top: 20px;
+          right: 150px;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white;
+          border: none;
+          padding: 10px;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 20px;
+          z-index: 2;
+        }
+
+        .music-toggle-btn:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .volume-slider {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          width: 120px;
+          height: 5%;
+          transform-origin: 50% 50%;
+          z-index: 2;
+        }
+
+        .volume-slider::-webkit-slider-runnable-track,
+        .volume-slider::-moz-range-track,
+        .volume-slider::-ms-track {
+          background: black;
+          border-radius: 10px;
+          height: 15px;
+        }
+
+        .volume-slider::-webkit-slider-thumb,
+        .volume-slider::-moz-range-thumb,
+        .volume-slider::-ms-thumb {
+          appearance: none;
+          background: black;
+          border: 2px solid #000;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
+
+<!-- Background Music -->
+<audio id="background-music" preload="auto" loop>
+    <source src="./assets/BGMusic.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<!-- Music Toggle Button -->
+<button class="music-toggle-btn" id="music-toggle-btn">
+    <span id="music-icon">🔊</span>
+</button>
+
+<!-- Volume Control -->
+<input type="range" class="volume-slider" id="volume-control" min="0" max="1" step="0.01" value="1">
 
 <!-- Background Image -->
 <img src="./assets/index/BG.jpg" alt="Background" class="background">
@@ -84,8 +148,43 @@
     <img src="./assets/index/CompSci.png" alt="Layer 2" class="layered-image" style="z-index: 2;">
     <img src="./assets/index/Welcome.png" alt="Layer 3" class="layered-image" style="z-index: 3;">
     <img src="./assets/index/Border.png" alt="Layer 4" class="layered-image" style="z-index: 4;">
-    <a href="PlayerSelect.html"><img src="./assets/index/StartButton.png" alt="Layer 5" class="start-button" style="z-index: 5;"></a>
+    <a href="PlayerSelect.html" target="_blank"><img src="./assets/index/StartButton.png" alt="Layer 5" class="start-button" style="z-index: 5;"></a>
 </div>
+
+<!-- JavaScript for Music Control -->
+<script>
+    window.addEventListener('load', () => {
+        const musicPlayer = document.getElementById('background-music');
+        const musicToggleBtn = document.getElementById('music-toggle-btn');
+        const volumeControl = document.getElementById('volume-control');
+        const musicIcon = document.getElementById('music-icon');
+
+        // Play the music as soon as the page is loaded
+        musicPlayer.play().then(() => {
+            // Music is successfully playing
+        }).catch((error) => {
+            // If auto-play fails, log the error
+            console.log("Autoplay failed:", error);
+        });
+
+        // Music Toggle Button click functionality
+        musicToggleBtn.addEventListener('click', () => {
+            if (musicPlayer.paused) {
+                musicPlayer.play();
+                musicIcon.textContent = "🔊";
+            } else {
+                musicPlayer.pause();
+                musicIcon.textContent = "🔇";
+            }
+        });
+
+        // Volume Control functionality
+        volumeControl.addEventListener('input', (e) => {
+            musicPlayer.volume = e.target.value;
+        });
+    });
+</script>
+
 
 </body>
 </html>
