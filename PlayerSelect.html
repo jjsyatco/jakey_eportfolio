@@ -63,20 +63,11 @@
       transition: opacity 0.3s ease, visibility 0s 0.1s; /* Smooth transition */
     }
 
-    .CivilEng:hover ~ .CE {
+    .CivilEng:hover + .CE,
+    .CompSci:hover + .CIS {
       visibility: visible;
       opacity: 1;
     }
-
-    .CompSci:hover ~ .CIS {
-      visibility: visible;
-      opacity: 1;
-    }
-
-
-
-
-
 
   </style>
 </head>
@@ -90,10 +81,16 @@
   <img src="./assets/playerSelect/AboutMe.png" alt="Layer 1" class="layered-image" style="z-index: 1;">
   <img src="./assets/playerSelect/Frame.png" alt="Layer 2" class="layered-image" style="z-index: 2;">
   <img src="./assets/playerSelect/PlayerSelect.png" alt="Layer 3" class="layered-image" style="z-index: 3;">
-  <a href="CivilEngineer.html"><img src="./assets/playerSelect/CivilEng.png" alt="Layer 4" class="layered-image CivilEng" style="z-index: 6;"></a>
-  <a href="CompSci.html"><img src="./assets/playerSelect/CompSci.png" alt="Layer 5" class="layered-image CompSci" style="z-index: 7;"></a>
-  <img src="./assets/playerSelect/CE.png" alt="Layer 6" class="layered-image CE" style="z-index: 4;">
-  <img src="./assets/playerSelect/CIS.png" alt="Layer 7" class="layered-image CIS" style="z-index: 5;">
+
+  <a href="CivilEngineer.html">
+    <img src="./assets/playerSelect/CivilEng.png" class="layered-image CivilEng" style="z-index: 60;">
+    <img src="./assets/playerSelect/CE.png" class="layered-image CE" style="z-index: 4;">
+  </a>
+
+  <a href="CompSci.html">
+    <img src="./assets/playerSelect/CompSci.png" class="layered-image CompSci" style="z-index: 70;">
+    <img src="./assets/playerSelect/CIS.png" class="layered-image CIS" style="z-index: 5;">
+  </a>
 
 </div>
 
