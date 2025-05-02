@@ -84,7 +84,7 @@
           border-radius: 50%;
           cursor: pointer;
           font-size: 20px;
-          z-index: 2;
+          z-index: 200;
         }
 
         .music-toggle-btn:hover {
@@ -98,7 +98,7 @@
           width: 120px;
           height: 5%;
           transform-origin: 50% 50%;
-          z-index: 2;
+          z-index: 200;
         }
 
         .volume-slider::-webkit-slider-runnable-track,
@@ -119,6 +119,34 @@
           width: 20px;
           height: 20px;
           cursor: pointer;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .layered-image {
+              height: 70%;
+            }
+
+            .start-button {
+              bottom: 15%;
+              height: 5%;
+            }
+
+
+        }
+
+        /* Extra small devices (phones) */
+        @media (max-width: 500px) {
+            .layered-image {
+              height: 50%;
+            }
+
+            .start-button {
+              bottom: 24%;
+              height: 4%;
+            }
+
+
         }
 
     </style>
