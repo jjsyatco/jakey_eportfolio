@@ -104,11 +104,12 @@
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             opacity: 0.9;
+            align-items: center;
         }
 
         .achievement img {
             width: 200px;
-            height: auto;
+            height: 200px;
             margin-right: 20px;
             border-radius: 8px;
         }
@@ -169,6 +170,65 @@
             max-height: 500px;
             padding-right: 10px;
         }
+
+        /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .achievement-container {
+        max-height: none;
+        overflow-y: visible;
+      }
+
+      .achievement {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .achievement img {
+        margin: 0 0 15px 0;
+        width: 80%;
+        height: auto;
+      }
+
+      .achievement div {
+        max-width: 100%;
+      }
+
+      .achievement h3 {
+        font-size: 1.5rem;
+      }
+
+      .achievement p {
+        font-size: 1rem;
+      }
+    }
+
+    /* Extra small devices (phones) */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      .achievement h3 {
+        font-size: 1.3rem;
+      }
+
+      .achievement p {
+        font-size: 0.95rem;
+      }
+
+    }
+
     </style>
 
     <!-- External FontAwesome for icons -->
@@ -200,42 +260,48 @@
     <div class="achievement-container">
         <!-- Achievement 1 -->
         <div class="achievement">
-            <img src="achievement1.jpg" alt="Achievement 1">
+            <a href="https://x.com/MapuaUniv/status/660305222435143680?mx=2" target="_blank"><img src="./assets/CivilEng/PRC.png" alt="Achievement 1"></a>
             <div>
-                <h3>Achievement Title 1</h3>
-                <p>This is a brief description of your first achievement. You can add any relevant information about the achievement, skills gained, and how it connects to your career goals.</p>
+                <h3>Top 1 Civil Engineering Licensure Exam Passer – PRC Philippines</h3>
+                <p>Achieved 1st place in the September 2015 Philippine Regulation Commission (PRC) Civil Engineering Licensure Examination. This distinction reflects a high level of technical proficiency, dedication, and academic excellence in the field of civil engineering. Demonstrated mastery across core engineering disciplines including structural analysis, hydraulics, transportation, and geotechnical engineering.</p>
             </div>
         </div>
 
         <!-- Achievement 2 -->
         <div class="achievement">
-            <img src="achievement2.jpg" alt="Achievement 2">
+            <a href="https://mot.gov.sa/en/" target="_blank"><img src="./assets/CivilEng/MOT.jpg" alt="Achievement 2"></a>
             <div>
-                <h3>Achievement Title 2</h3>
-                <p>Provide some details about your second achievement. Maybe it was a project, recognition, or another milestone you hit in your career or education.</p>
+                <h3>Lead Coordinator – ISO/IEC 17025 Accreditation, Ministry of Transport Central Laboratory (Saudi Arabia)</h3>
+                <p>Earned certification in ISO/IEC 17025, the international standard for testing and calibration laboratories. Led the successful accreditation process for the Ministry of Transport Central Laboratory in Saudi Arabia, ensuring full compliance with international quality and technical standards. Oversaw documentation, training, internal audits, and liaised with accreditation bodies—strengthening the lab's credibility and operational excellence.</p>
+                <a href="./assets/L21-263.pdf" style="color: #f4f4f4f4;" target="_blank">ISO 17025:2017 PJLA ACCREDITATION [PDF]</a>
             </div>
         </div>
 
         <!-- Achievement 3 -->
         <div class="achievement">
-            <img src="achievement3.jpg" alt="Achievement 3">
+            <a href="./assets/DAS.pdf" target="_blank"><img src="./assets/CivilEng/DAS.jpg" alt="Achievement 3"></a>
             <div>
-                <h3>Achievement Title 3</h3>
-                <p>Here’s where you would describe your third achievement, whether it was a certification, project, or another important career moment.</p>
+                <h3>Developer – Design Aggregate Structure Supplemental Tool for ePAVE3 (Superpave Mix Design Support Tool)</h3>
+                <p>Developed a Python-based supplemental software tool for the ePAVE3 Excel Program used in Superpave asphalt mix design across Saudi Arabia. Named the Design Aggregate Structure Supplemental Tool, this application assists engineers by automatically generating initial aggregate blends that conform to AASHTO M323 control points and gradation requirements. The tool eliminates time-consuming trial-and-error processes, offering optimized blend options that improve efficiency and accuracy during the mix design stage.</p>
+                <a href="./assets/DAS.pdf" style="color: #f4f4f4f4;" target="_blank">Design Aggregate Structure Supplemental Tool for ePAVE3 [PDF]</a>
             </div>
         </div>
 
         <!-- Achievement 4 -->
         <div class="achievement">
-            <img src="achievement4.jpg" alt="Achievement 4">
+            <a href="./assets/FTIR.mp4" target="_blank"><img src="./assets/CivilEng/FTIR.jpg" alt="Achievement 4"></a>
             <div>
-                <h3>Achievement Title 4</h3>
-                <p>Here’s where you would describe your fourth achievement, whether it was a certification, project, or another important career moment.</p>
+                <h3>Researcher – FT-IR Analysis of Polymer-Modified Asphalt Binders (PMABs)</h3>
+                <p>Conducted an in-depth research study on the application of Fourier Transform Infrared Spectroscopy (FT-IR) to detect and verify the presence of modifiers in Polymer-Modified Asphalt Binders (PMABs). Utilizing the Bruker Tensor 27 FT-IR system with a PIKE MIRacle™ ATR cell (ZnSe crystal), the research aimed to distinguish commonly used polymer types and evaluate their chemical signatures in extracted asphalt samples.</p>
+                <a href="./assets/FT-IR.pdf" style="color: #f4f4f4f4;" target="_blank">Fourier Transform Infrared Spectroscopy (FT-IR) For Handing Over PMAB Samples [PDF]</a>
             </div>
         </div>
 
+
         <!-- Add more achievements as needed -->
     </div>
+
+
 </div>
 
 
