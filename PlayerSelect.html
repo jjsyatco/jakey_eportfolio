@@ -87,6 +87,8 @@
         top: 35%;
         left: 35%;
       }
+
+      
     }
 
 
@@ -115,9 +117,6 @@
         top: 38%;
       }
 
-      .CE , .CIS{
-        height: 40%;
-      }
 
       .About {
         height: 60%;
@@ -126,7 +125,11 @@
         transform: none;
       }
 
-
+      .CivilEng:hover + .CE,
+      .CompSci:hover + .CIS {
+        visibility: hidden;
+        opacity: 0;
+      }
 
 
     }
