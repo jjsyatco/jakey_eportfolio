@@ -33,6 +33,36 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+          height: 90%;
+          opacity: 0;
+          animation: fadeInSlide 1.5s ease forwards;
+        }
+
+        .layered-imageC {
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 100%;
+          opacity: 0;
+          animation: fadeInSlide 1.5s ease forwards;
+        }
+
+        .layered-imageL {
+          position: absolute;
+          top: 50%;
+          left: 60%;
+          transform: translate(-50%, -50%);
+          height: 100%;
+          opacity: 0;
+          animation: fadeInSlide 1.5s ease forwards;
+        }
+
+        .layered-imageR {
+          position: absolute;
+          top: 50%;
+          left: 40%;
+          transform: translate(-50%, -50%);
           height: 100%;
           opacity: 0;
           animation: fadeInSlide 1.5s ease forwards;
@@ -127,6 +157,21 @@
               height: 70%;
             }
 
+            .layered-imageL {
+              height: 70%;
+              top: 45%;
+            }
+
+            .layered-imageC {
+              height: 70%;
+              top: 50%;
+            }
+
+            .layered-imageR {
+              height: 70%;
+              top: 45%;
+            }
+
             .start-button {
               bottom: 15%;
               height: 5%;
@@ -139,6 +184,21 @@
         @media (max-width: 500px) {
             .layered-image {
               height: 50%;
+            }
+
+            .layered-imageL {
+              height: 50%;
+              top: 45%
+            }
+
+            .layered-imageC {
+              height: 50%;
+              top: 50%;
+            }
+
+            .layered-imageR {
+              height: 50%;
+              top: 45%;
             }
 
             .start-button {
@@ -172,11 +232,12 @@
 
 <!-- Foreground Container for Layering -->
 <div class="foreground">
-    <img src="./assets/index/CivilEng.png" alt="Layer 1" class="layered-image" style="z-index: 1;">
-    <img src="./assets/index/CompSci.png" alt="Layer 2" class="layered-image" style="z-index: 2;">
-    <img src="./assets/index/Welcome.png" alt="Layer 3" class="layered-image" style="z-index: 3;">
-    <img src="./assets/index/Border.png" alt="Layer 4" class="layered-image" style="z-index: 4;">
-    <a href="PlayerSelect.html" target="_blank"><img src="./assets/index/StartButton.png" alt="Layer 5" class="start-button" style="z-index: 5;"></a>
+    <img src="./assets/index/CivilEng.png" alt="Layer 1" class="layered-imageL" style="z-index: 1;">
+    <img src="./assets/index/CompSci.png" alt="Layer 2" class="layered-imageR" style="z-index: 2;">
+    <img src="./assets/index/SousChef.png" alt="Layer 2" class="layered-imageC" style="z-index: 3;">
+    <img src="./assets/index/Welcome.png" alt="Layer 3" class="layered-image" style="z-index: 4;">
+    <img src="./assets/index/Border.png" alt="Layer 4" class="layered-image" style="z-index: 5;">
+    <a href="PlayerSelect.html" target="_blank"><img src="./assets/index/StartButton.png" alt="Layer 5" class="start-button" style="z-index: 6;"></a>
 </div>
 
 <!-- JavaScript for Music Control -->

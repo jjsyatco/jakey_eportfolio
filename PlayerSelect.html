@@ -41,30 +41,37 @@
       position: relative;
       height: 52%;
       top: 55%;
-      left: 64%;
+      left: 70%;
     }
 
     .CompSci {
       height: 52%;
       top: 31%;
-      left: 36%;
+      left: 30%;
+    }
+
+    .SousChef {
+      height: 40%;
+      top: 43%;
+      left: 50%;
     }
 
     /* Hover effect for CivilEng and CompSci */
-    .CivilEng:hover, .CompSci:hover {
+    .CivilEng:hover, .CompSci:hover, .SousChef:hover {
       transform: translate(-50%, -50%) scale(1.1); /* Slightly scale the image */
       filter: brightness(1.2); /* Increase brightness on hover */
     }
 
     /* Hide Layer 6 and 7 by default */
-    .CE , .CIS{
+    .CE , .CIS, .CF{
       visibility: hidden; /* Hide by default */
       opacity: 0; /* Ensure it is fully transparent */
       transition: opacity 0.3s ease, visibility 0s 0.1s; /* Smooth transition */
     }
 
     .CivilEng:hover + .CE,
-    .CompSci:hover + .CIS {
+    .CompSci:hover + .CIS,
+    .SousChef:hover + .CF{
       visibility: visible;
       opacity: 1;
     }
@@ -88,6 +95,12 @@
         left: 35%;
       }
 
+      .SousChef {
+        height: 30%;
+        top: 45%;
+        left: 50%;
+      }
+
       
     }
 
@@ -98,7 +111,7 @@
         height: 80%;
       }
 
-      .CivilEng, .CompSci {
+      .CivilEng, .CompSci , .SousChef{
         height: 20%;
       }
 
@@ -110,6 +123,11 @@
       .CompSci {
         top: 40%;
         left: 30%;
+      }
+
+      .SousChef {
+        top: 45%;
+        left: 50.5%;
       }
 
       .PS {
@@ -126,7 +144,8 @@
       }
 
       .CivilEng:hover + .CE,
-      .CompSci:hover + .CIS {
+      .CompSci:hover + .CIS,
+      .SousChef:hover + .CF{
         visibility: hidden;
         opacity: 0;
       }
@@ -147,6 +166,11 @@
   <img src="./assets/playerSelect/Frame.png" alt="Layer 2" class="layered-image" style="z-index: 2;">
   <img src="./assets/playerSelect/PlayerSelect.png" alt="Layer 3" class="layered-image PS" style="z-index: 3;">
 
+  <a href="SousChef.html">
+    <img src="./assets/playerSelect/SousChef.png" class="layered-image SousChef" style="z-index: 80;">
+    <img src="./assets/playerSelect/CF.png" class="layered-image CF" style="z-index: 5;">
+  </a>
+
   <a href="CivilEngineer.html">
     <img src="./assets/playerSelect/CivilEng.png" class="layered-image CivilEng" style="z-index: 60;">
     <img src="./assets/playerSelect/CE.png" class="layered-image CE" style="z-index: 4;">
@@ -156,6 +180,7 @@
     <img src="./assets/playerSelect/CompSci.png" class="layered-image CompSci" style="z-index: 70;">
     <img src="./assets/playerSelect/CIS.png" class="layered-image CIS" style="z-index: 5;">
   </a>
+
 
 </div>
 
